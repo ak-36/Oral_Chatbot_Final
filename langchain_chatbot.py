@@ -1,5 +1,7 @@
 import os
-os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
+from dotenv import load_dotenv
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 # key = os.environ['OPENAI_API_KEY']
 
 from langchain.embeddings.openai import OpenAIEmbeddings
